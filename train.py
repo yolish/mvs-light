@@ -93,7 +93,7 @@ def train(model, criterion, optimizer, train_loader, test_loader, start_epoch, a
                                                                         epoch_idx, args.epochs,
                                                                         batch_idx,
                                                                         len(test_loader), loss,
-                                                                        scalar_outputs["mvs_loss"],
+                                                                        scalar_outputs["mvs_depth_loss"],
                                                                         time.time() - start_time))
                 avg_test_scalars.update(scalar_outputs)
                 del scalar_outputs, image_outputs
