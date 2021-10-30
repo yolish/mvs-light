@@ -33,23 +33,25 @@ export save_results_dir="./checkpoints"
 ## Testing and Fusion
 * Download the preprocessed test data [DTU testing data](https://drive.google.com/open?id=135oKPefcPTsdtLRzoDAQtPpHuoIrpRI_) (from [Original MVSNet](https://github.com/YoYo000/MVSNet)) and unzip it as the $TESTPATH folder, which should contain one ``cams`` folder, one ``images`` folder and one ``pair.txt`` file.
 * In ``test.sh``, set ``TESTPATH`` as $TESTPATH.
-* Set ``CKPT_FILE``  as your checkpoint file, you also can download my [pretrained model](https://virutalbuy-public.oss-cn-hangzhou.aliyuncs.com/share/cascade-stereo/CasMVSNet/48_32_8-4-2-1_dlossw-0.5-1.0-2.0/casmvsnet.ckpt).
-* Test CasMVSNet and Fusion( default is provided by [MVSNet-pytorch](https://github.com/xy-guo/MVSNet_pytorch)): 
+* Set ``CKPT_FILE``  as your checkpoint file, 
+* Test CasMVSNet and Fusion( fusion method is provided by [MVSNet-pytorch](https://github.com/xy-guo/MVSNet_pytorch)): 
 ```
 export save_results_dir="./outputs"
 ./test.sh  $CKPT_FILE --outdir $save_results_dir  --interval_scale 1.06
+
+You can reproduce the quantitative results on DTU by running ```eval_dtu.py```
 ```
 ## Results on DTU
 |                       | Acc.   | Comp.  | Overall. |
 |-----------------------|--------|--------|----------|
-| MVSLight        | 0.396  | 0.527  | 0.462    |
+| MVSLight        | xx  | xx  | xx    |
 
 
 ## Results on Tanks and Temples benchmark
 
 | Mean   | Family | Francis | Horse  | Lighthouse | M60    | Panther | Playground | Train |
 |--------|--------|---------|--------|------------|--------|---------|------------|-------|
-| 56.42  | 76.36  | 58.45   | 46.20  | 55.53	  | 56.11  | 54.02   | 58.17	  | 46.56 |
+| xx  | xx  | xx   | xx  | xx	  | xx  | xx   | xx	  | xx |
 
 Please refer to [leaderboard](https://www.tanksandtemples.org/details/691/).
 
