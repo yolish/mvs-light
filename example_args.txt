@@ -1,0 +1,3 @@
+eval_all_dtu.py
+--outputs_dir <your_folder_results_name>
+--dataset_dir "<path>/SampleSet/MVS Data/"
