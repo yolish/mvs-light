@@ -72,7 +72,7 @@ def train(model, criterion, optimizer, train_loader, test_loader, start_epoch, a
         if (epoch_idx + 1) % args.save_freq == 0:
             torch.save({
 				'epoch': epoch_idx,
-				'model': model.module.state_dict(),
+				'model': model.state_dict(),
 				'optimizer': optimizer.state_dict()},
 				"{}/model_{:0>6}.ckpt".format(args.logdir, epoch_idx))
         gc.collect()
